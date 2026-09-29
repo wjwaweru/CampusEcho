@@ -1,0 +1,8 @@
+{
+  "name": "CampusEcho",
+  "description": "Smart Campus Companion for university students and administrators to manage timetables, venues, events, announcements, and collision detection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
