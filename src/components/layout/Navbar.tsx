@@ -157,6 +157,17 @@ export const Navbar: React.FC<Props> = ({
               >
                 Report Issue
               </button>
+              <button
+                onClick={() => onNavigateTab('gmail')}
+                className={`px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 ${
+                  activeTab === 'gmail'
+                    ? 'bg-rose-50 text-rose-700 font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+              >
+                <span className="w-2 h-2 rounded-full bg-rose-500" />
+                <span>Gmail</span>
+              </button>
 
               {isAdmin && (
                 <button

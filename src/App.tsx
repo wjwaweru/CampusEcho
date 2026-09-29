@@ -16,6 +16,7 @@ import { VenuesPage } from './pages/student/VenuesPage';
 import { AnnouncementsPage } from './pages/student/AnnouncementsPage';
 import { EventsPage } from './pages/student/EventsPage';
 import { IssueReportingPage } from './pages/student/IssueReportingPage';
+import { GmailInboxPage } from './pages/GmailInboxPage';
 
 // Admin Pages
 import { AdminDashboard } from './pages/admin/AdminDashboard';
@@ -81,6 +82,9 @@ function MainApp() {
         return <EventsPage />;
       case 'reports':
         return <IssueReportingPage />;
+      case 'gmail':
+      case 'mail':
+        return <GmailInboxPage />;
 
       // Protected Admin Routes
       case 'admin-dashboard':

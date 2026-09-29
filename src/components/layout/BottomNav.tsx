@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, CalendarDays, MapPin, Calendar, Bell, AlertCircle, Shield } from 'lucide-react';
+import { LayoutDashboard, CalendarDays, MapPin, Calendar, Bell, AlertCircle, Shield, Mail } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 interface Props {
@@ -50,15 +50,15 @@ export const BottomNav: React.FC<Props> = ({ activeTab, onNavigateTab }) => {
         </button>
 
         <button
-          onClick={() => onNavigateTab('events')}
+          onClick={() => onNavigateTab('gmail')}
           className={`flex flex-col items-center py-1 px-2 rounded-xl transition ${
-            activeTab === 'events'
-              ? 'text-emerald-700 font-bold'
+            activeTab === 'gmail'
+              ? 'text-rose-600 font-bold'
               : 'text-slate-500 hover:text-slate-900'
           }`}
         >
-          <Calendar className="w-5 h-5 mb-0.5" />
-          <span className="text-[10px]">Events</span>
+          <Mail className="w-5 h-5 mb-0.5" />
+          <span className="text-[10px]">Gmail</span>
         </button>
 
         <button

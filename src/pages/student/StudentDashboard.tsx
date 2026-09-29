@@ -11,6 +11,7 @@ import {
   CheckCircle,
   ExternalLink,
   PlusCircle,
+  Mail,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { db, timeToMinutes } from '../../services/db';
@@ -150,7 +151,7 @@ export const StudentDashboard: React.FC<Props> = ({ onNavigateTab, onOpenReportM
       )}
 
       {/* Quick Action Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4">
         <button
           onClick={() => onNavigateTab('timetable')}
           className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-300 hover:shadow-md transition text-left space-y-2 group cursor-pointer"
@@ -160,9 +161,9 @@ export const StudentDashboard: React.FC<Props> = ({ onNavigateTab, onOpenReportM
           </div>
           <div>
             <div className="font-bold text-xs text-slate-900 group-hover:text-emerald-700">
-              My Timetable
+               My Timetable
             </div>
-            <div className="text-[11px] text-slate-500">Daily & Weekly Schedule</div>
+            <div className="text-[11px] text-slate-500">Daily & Weekly</div>
           </div>
         </button>
 
@@ -177,7 +178,22 @@ export const StudentDashboard: React.FC<Props> = ({ onNavigateTab, onOpenReportM
             <div className="font-bold text-xs text-slate-900 group-hover:text-blue-700">
               Find Venue
             </div>
-            <div className="text-[11px] text-slate-500">Live Availability & Labs</div>
+            <div className="text-[11px] text-slate-500">Labs & Availability</div>
+          </div>
+        </button>
+
+        <button
+          onClick={() => onNavigateTab('gmail')}
+          className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-rose-300 hover:shadow-md transition text-left space-y-2 group cursor-pointer"
+        >
+          <div className="w-9 h-9 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center group-hover:scale-105 transition">
+            <Mail className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="font-bold text-xs text-slate-900 group-hover:text-rose-700">
+              Campus Gmail
+            </div>
+            <div className="text-[11px] text-slate-500">Inbox & Comrades</div>
           </div>
         </button>
 
@@ -192,13 +208,13 @@ export const StudentDashboard: React.FC<Props> = ({ onNavigateTab, onOpenReportM
             <div className="font-bold text-xs text-slate-900 group-hover:text-purple-700">
               Campus Events
             </div>
-            <div className="text-[11px] text-slate-500">Derbies, Hackathons, Fairs</div>
+            <div className="text-[11px] text-slate-500">Derbies & Fairs</div>
           </div>
         </button>
 
         <button
           onClick={() => onNavigateTab('reports')}
-          className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-amber-300 hover:shadow-md transition text-left space-y-2 group cursor-pointer"
+          className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-amber-300 hover:shadow-md transition text-left space-y-2 group cursor-pointer col-span-2 sm:col-span-1"
         >
           <div className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center group-hover:scale-105 transition">
             <AlertTriangle className="w-5 h-5" />
@@ -207,7 +223,7 @@ export const StudentDashboard: React.FC<Props> = ({ onNavigateTab, onOpenReportM
             <div className="font-bold text-xs text-slate-900 group-hover:text-amber-700">
               Report Issue
             </div>
-            <div className="text-[11px] text-slate-500">Facilities & Tech Support</div>
+            <div className="text-[11px] text-slate-500">Facilities & Tech</div>
           </div>
         </button>
       </div>

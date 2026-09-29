@@ -75,6 +75,14 @@ export const Footer: React.FC<Props> = ({ onNavigateTab, onOpenAuth }) => {
                   Report Campus Issue
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onNavigateTab('gmail')}
+                  className="hover:text-emerald-400 transition"
+                >
+                  Campus Gmail
+                </button>
+              </li>
             </ul>
           </div>
 
